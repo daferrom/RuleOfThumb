@@ -111,9 +111,7 @@
 .votationBar{
     display:flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    
-    
+    flex-wrap: nowrap;   
 }
 .thumbsUp{
     display:flex;
@@ -121,7 +119,10 @@
     width: 25%;
     position:absolute;
     bottom:0;
-    left: 0;
+    left: 0;    
+}
+.thumbsUp img{
+    margin-left:1em;  
 }
 .thumbsDown{
     display:flex;
@@ -130,11 +131,18 @@
     position:absolute;
     bottom:0;
     right: 0;
+    justify-content: right;
+    
+}
+.thumbsDown img{
+    margin-right:1em;  
 }
 
-.percentage{
-    font-size: 12px;
-    color:white;
+.percentageUp,.percentageDown{
+    margin: 5px 5px;
+    font-size: 1.6em;
+    color:var(--color-white)
 }
+
 
 

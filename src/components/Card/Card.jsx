@@ -29,11 +29,11 @@ const Card = () => {
         <div className="votationBar">
                 <div className="thumbsUp">
                     <img src="../../assets/img/thumbs-up.svg" alt="thumbs up" />
-                    <p className="percentage">25%</p>
+                    <p className="percentageUp">25%</p>
                 </div>
                 <div className="thumbsDown">
+                    <p className="percentageDown">75%</p>
                     <img src="../../assets/img/thumbs-down.svg" alt="thumbs Down" />
-                    <p className="percentage">75%</p>
                 </div>
         </div>
         
