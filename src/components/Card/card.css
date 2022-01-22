@@ -1,0 +1,140 @@
+:root {
+    --color-green-positive: 60, 187, 180;
+    --color-yellow-negative: 249, 173, 29;
+    --color-dark-background: rgba(0, 0, 0, .4);
+    --color-darker-background: rgba(0, 0, 0, .6);
+    --color-darker-gray: rgba(51, 51, 51, 1);
+    --color-dark-gray: rgba(70, 70, 70, 1);
+    --color-light-gray: rgba(235, 235, 235, 1);
+    --color-light-background: rgba(255, 255, 255, .4);
+    --color-lighter-background: rgba(255, 255, 255, .8);
+    --color-white: rgba(255, 255, 255, 1);
+}
+
+.card{
+    background-image: url("../../../public/assets/img/KanyeWest.jpg") ;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding:0px;
+    margin:0px;
+    position: relative;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top:30%;
+    
+    
+}
+
+.iconContainer{
+    background-color: rgba(var(--color-green-positive), .8); ;
+    height:40px;
+    width:20%;
+}
+.iconContainer .icon{
+   padding-top: 25%; 
+   padding-left: 25%;
+   width:55%;    
+}
+.texts{
+    padding-top: 0px;
+}
+.pollTitle,.question,.pubDate,.labelVoteNow{
+    color:var(--color-white)
+}
+.pollTitle{
+    font-size: 2.5em;
+    font-weight: 400;
+    margin:0;
+    padding:0;
+}
+.question{
+    margin: 5px 0 0 10px;
+    font-size: 1.3rem;
+    text-align:left;
+    font-weight: 350;
+}
+.pubDate{
+    text-align: right;
+    margin-top: 5px;
+    margin-right:2em;
+    font-size: 1rem;
+}
+.thumbsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-right:2em;
+}
+.buttonContainer{
+    margin:5px 0px;
+}
+
+.iconButton {
+    padding: 5px 7px;
+    border: 0;
+    margin-right:12px;
+}
+
+.iconButton[aria-label="thumbs up"] {
+    background-color: rgba(var(--color-green-positive));
+}
+
+.iconButton[aria-label="thumbs up"]:hover {
+    background-color: rgba(var(--color-green-positive),.7);
+}
+
+.iconButton[aria-label="thumbs down"] {
+    background-color: rgba(var(--color-yellow-negative));
+}
+
+.iconButton[aria-label="thumbs down"]:hover {
+    background-color: rgba(var(--color-yellow-negative), .7);
+}
+
+.labelVoteNow{
+    display:flex;
+    background-color: var(--color-darker-background);
+    border: solid;
+    border-width: 1px;
+    padding: 0em 1.5em;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2em;      
+}
+.votationBar{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    
+}
+.thumbsUp{
+    display:flex;
+    background-color:rgba(var(--color-green-positive),.7);
+    width: 25%;
+    position:absolute;
+    bottom:0;
+    left: 0;
+}
+.thumbsDown{
+    display:flex;
+    background-color:rgba(var(--color-yellow-negative), .7);
+    width:75%;
+    position:absolute;
+    bottom:0;
+    right: 0;
+}
+
+.percentage{
+    font-size: 12px;
+    color:white;
+}
+
+
