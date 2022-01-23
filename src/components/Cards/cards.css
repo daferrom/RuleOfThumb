@@ -48,20 +48,27 @@
         flex-wrap: nowrap;
         overflow-x:scroll;
         scroll-behavior: smooth;
-
-
     }
     
 
 /*Media query for tablets*/
 @media (min-width:768px){
+    .list-container{
+        display:none
+    }
+    .list-container:active{
+        display:flex;
+    }
     .grid-container{
-        display: grid;
+        display: none;
         background-color: thistle;
         grid-template-columns: 351px 351px;
         justify-content: space-between;
         margin:0 0 0 0 ;
         padding:0px
+    }
+    .grid-container:active{
+        display:grid;
     }
     .card{
         height:351px;
@@ -75,7 +82,6 @@
         padding-top:30%;
         width:351px;
     }
-    .list-container{
-        /* display:none; */
-    }
+    
+    
 }

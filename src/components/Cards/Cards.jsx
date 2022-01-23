@@ -1,36 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '../Card/Card';
 import './cards.css'
 import ListItem from '../ListItem/ListItem';
 
 
+
 const Cards = () => {
-  const ListItems = document.querySelectorAll("list-container ListItem")
+
+  const [ listStyleName , setListStyleName ] = useState('list-container-active')
+  const [ gridStyleName , setGridStyleName ] = useState('grid-container')
+  
+  // listen the click even on list view option
+  const listSelected = () => {
+    setListStyleName('list-container-active')
+    setGridStyleName('grid-container')
+  }
+  // listen the click even on grid view option
+  const gridSelected = () =>{
+    setListStyleName('list-container')
+    setGridStyleName('grid-container-active')
+  }
 
   return (
   <div className='componentContainer'>
       <div className="titleSelectContainer">
       <h1 className="title">Previous Rulings</h1>
         <select className="select">
-          <option className="option" value='listView' >List</option>
-          <option className="option" value='gridView' >Grid</option>
+          <option className="option" value='listView' onClick={(e)=>listSelected(e)}>List</option>
+          <option className="option" value='gridView' onClick={(e)=>gridSelected(e)}>Grid</option>
         </select>
-      </div>  
-    <div className="list-container">
+      </div>
+    <div className={listStyleName}>
       <ListItem/>
       <ListItem/>
       <ListItem/>
       <ListItem/>
       <ListItem/>
-      <ListItem/>    
+      <ListItem/>
     </div>
-    <div className="grid-container">
+    <div className={gridStyleName}>
       <Card/>
       <Card/>
       <Card/>
       <Card/>
       <Card/>
-      <Card/>     
+      <Card/>
     </div>
   </div>
   )
