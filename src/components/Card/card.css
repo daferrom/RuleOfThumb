@@ -12,13 +12,13 @@
 }
 
 .card{
+
     background-image: url("../../../public/assets/img/KanyeWest.jpg") ;
     background-size: cover;
     background-repeat: no-repeat;
     height:300px;
     width:300px;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
+
     padding:0px;
     margin:0px;
     position: relative;
@@ -40,9 +40,9 @@
     width:20%;
 }
 .iconContainer .icon{
-   padding-top: 25%; 
+   padding-top: 25%;
    padding-left: 25%;
-   width:55%;    
+   width:55%;
 }
 .texts{
     padding-top: 0px;
@@ -109,12 +109,12 @@
     padding: 0em 1.5em;
     text-align: center;
     align-items: center;
-    font-size: 1.2em;      
+    font-size: 1.2em;
 }
 .votationBar{
     display:flex;
     flex-direction: row;
-    flex-wrap: nowrap;   
+    flex-wrap: nowrap;
 }
 .thumbsUp{
     display:flex;
@@ -122,10 +122,10 @@
     width: 25%;
     position:absolute;
     bottom:0;
-    left: 0;    
+    left: 0;
 }
 .thumbsUp img{
-    margin-left:1em;  
+    margin-left:1em;
 }
 .thumbsDown{
     display:flex;
@@ -135,10 +135,10 @@
     bottom:0;
     right: 0;
     justify-content: right;
-    
+
 }
 .thumbsDown img{
-    margin-right:1em;  
+    margin-right:1em;
 }
 
 .percentageUp,.percentageDown{
@@ -149,6 +149,6 @@
 
 @media (min-width:768px){
     .card{
-        
+
 
 }}

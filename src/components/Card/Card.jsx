@@ -3,6 +3,7 @@ import './card.css'
 
 const Card = () => {
   return (
+ 
   <div className='card'>
         <div className='container'>
             <div className='iconContainer' aria-label="thumbs">
@@ -36,9 +37,8 @@ const Card = () => {
                     <img src="../../assets/img/thumbs-down.svg" alt="thumbs Down" />
                 </div>
         </div>
-        
-
     </div>
+  
  
 
   )
