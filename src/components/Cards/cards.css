@@ -1,0 +1,29 @@
+
+/*Media query for mobile version*/
+
+    .grid-container{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        overflow-x:scroll;
+        scroll-behavior: smooth;
+
+
+    }
+    
+
+/*Media query for tablets*/
+@media (min-width:768px){
+    .grid-container{
+        display: grid;
+        background-color: thistle;
+        grid-template-columns: 351px 351px;
+        justify-content: space-between;
+        margin:0 0 0 0 ;
+        padding:0px
+    }
+    
+    
+
+
+}

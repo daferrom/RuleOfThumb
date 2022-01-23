@@ -14,21 +14,24 @@
 .card{
     background-image: url("../../../public/assets/img/KanyeWest.jpg") ;
     background-size: cover;
-    height: 300px;
-    width: 300px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    background-repeat: no-repeat;
+    height:300px;
+    width:300px;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
     padding:0px;
     margin:0px;
     position: relative;
+    margin-bottom:20px;
+    margin-right:20px;
 }
+
 .container{
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     padding-top:30%;
-    
-    
+    width:300px;
 }
 
 .iconContainer{
@@ -144,5 +147,8 @@
     color:var(--color-white)
 }
 
+@media (min-width:768px){
+    .card{
+        
 
-
+}}
