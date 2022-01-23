@@ -22,6 +22,18 @@
         margin:0 0 0 0 ;
         padding:0px
     }
+    .card{
+        height:351px;
+        width:351px;
+        margin-right:0px;
+    }
+    .container{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-top:30%;
+        width:351px;
+    }
     
     
 
