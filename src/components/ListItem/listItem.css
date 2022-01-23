@@ -15,7 +15,9 @@
     height:142px;
     display: flex;
     justify-content: space-between;
-    padding:0px 15px 0px 0px
+    padding:0px 0px 0px 0px;
+    position: relative;
+    margin-bottom: 14px;
 }
 .iconCont{
     display: flex;
@@ -49,17 +51,17 @@
 }
 .containerDateAndBtns{
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 1em;
 }
 .pubSince{
-    
+    margin: 0px 0px;
 }
 .btnsContainer{
     display:flex;
     align-items: center;
-}
-.thumbBtns{
-   
-   
 }
 .iconBtn{
     height: 30px;
@@ -86,4 +88,41 @@
 
 .labelVoteNow{
     height: 38px;   
+}
+.votationBarLi{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 36px;
+    margin: 0px;
+    padding: 0px;
+}
+.thumbsUp{
+    display:flex;
+    background-color:rgba(var(--color-green-positive),.7);
+    width: 25%;
+    position:absolute;
+    bottom:0;
+    left: 0;
+}
+.thumbsUp img{
+    margin-left:1em;
+}
+.thumbsDown{
+    display:flex;
+    background-color:rgba(var(--color-yellow-negative), .7);
+    width:75%;
+    position:absolute;
+    bottom:0;
+    right: 0;
+    justify-content: right;
+
+}
+.thumbsDown img{
+    margin-right:1em;
+}
+
+.percentageUp,.percentageDown{
+    font-size: 1.2em;
+    color:var(--color-white)
 }

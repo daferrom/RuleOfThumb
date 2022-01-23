@@ -27,7 +27,7 @@ const ListItem = () => {
           <div className="labelVoteNow">Vote Now</div>
         </div>
       </div>
-      <div className="votationBar">
+      <div className="votationBarLi">
                 <div className="thumbsUp">
                     <img src="../../assets/img/thumbs-up.svg" alt="thumbs up" />
                     <p className="percentageUp">25%</p>

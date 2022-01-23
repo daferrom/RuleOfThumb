@@ -5,6 +5,8 @@ import ListItem from '../ListItem/ListItem';
 
 
 const Cards = () => {
+  const ListItems = document.querySelectorAll("list-container ListItem")
+
   return (
   <div className='componentContainer'>
       <div className="titleSelectContainer">
@@ -15,16 +17,21 @@ const Cards = () => {
         </select>
       </div>  
     <div className="list-container">
+      <ListItem/>
+      <ListItem/>
+      <ListItem/>
+      <ListItem/>
+      <ListItem/>
       <ListItem/>    
     </div>
-    {/* <div className="grid-container">
+    <div className="grid-container">
       <Card/>
       <Card/>
       <Card/>
       <Card/>
       <Card/>
       <Card/>     
-    </div> */}
+    </div>
   </div>
   )
 };
