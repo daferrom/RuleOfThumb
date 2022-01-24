@@ -3,7 +3,7 @@ import "./listItem.css";
 
 
 const ListItem = ({props}) => {
-  const imageUrl = `../../../public/assets/img/backgroundcards/kanye.png`
+  const imageUrl = `https://github.com/daferrom/RuleOfThumb/blob/main/public/assets/img/backgroundcards/${props.picture}?raw=true`
 
   return (
     <div className="itemContainer">
