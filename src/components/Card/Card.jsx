@@ -31,12 +31,12 @@ const Card = ({props}) => {
             <div className="labelVoteNow">Vote Now</div>
         </div>
         <div className="votationBar">
-                <div className="thumbsUp">
+                <div className="thumbsUp" >
                     <img src="../../assets/img/thumbs-up.svg" alt="thumbs up" />
-                    <p className="percentageUp">25%</p>
+                    <p className="percentageUp">{props.votes.positive}</p>
                 </div>
                 <div className="thumbsDown">
-                    <p className="percentageDown">75%</p>
+                    <p className="percentageDown">{props.votes.negative}</p>
                     <img src="../../assets/img/thumbs-down.svg" alt="thumbs Down" />
                 </div>
         </div>

@@ -5,8 +5,7 @@ import ListItem from '../ListItem/ListItem';
 import data from '../../dummyData/data.json'
 
 const Cards = () => {
-  const polls = data.data
-  console.log(polls)    
+  const polls = data.data   
 
   const [ listStyleName , setListStyleName ] = useState('list-container')
   const [ gridStyleName , setGridStyleName ] = useState('grid-container-active')

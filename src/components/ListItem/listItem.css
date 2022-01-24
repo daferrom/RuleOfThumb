@@ -101,14 +101,14 @@
     margin: 0px;
     padding: 0px;
 }
-.thumbsUp{
+/* .thumbsUp{
     display:flex;
     background-color:rgba(var(--color-green-positive),.7);
     width: 25%;
     position:absolute;
     bottom:0;
     left: 0;
-}
+} */
 .thumbsUp img{
     margin-left:1em;
 }
