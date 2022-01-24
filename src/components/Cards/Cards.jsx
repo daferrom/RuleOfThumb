@@ -8,8 +8,8 @@ const Cards = () => {
   const polls = data.data
   console.log(polls)    
 
-  const [ listStyleName , setListStyleName ] = useState('list-container-active')
-  const [ gridStyleName , setGridStyleName ] = useState('grid-container')
+  const [ listStyleName , setListStyleName ] = useState('list-container')
+  const [ gridStyleName , setGridStyleName ] = useState('grid-container-active')
   
   // listen the click even on list view option
   const listSelected = () => {
@@ -37,12 +37,9 @@ const Cards = () => {
       )}        
     </div>
     <div className={gridStyleName}>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+    {polls.map((poll, index)=>
+      <Card props={poll} key={index}/>
+      )} 
     </div>
   </div>
   )
