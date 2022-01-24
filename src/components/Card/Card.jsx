@@ -2,9 +2,11 @@ import React from 'react';
 import './card.css'
 
 const Card = ({props}) => {
+    const imgUrl = `url(https://github.com/daferrom/RuleOfThumb/blob/main/public/assets/img/backgroundcards/${props.picture}?raw=true)`
+
   return (
  
-  <div className='card'>
+  <div className='card' style={{backgroundImage:imgUrl}} >
         <div className='container'>
              <div className="iconAndTitleCont">  
                 <div className='iconContainer' aria-label="thumbs">

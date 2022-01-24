@@ -38,7 +38,7 @@
     
 }
 /*Media query for mobile version*/
-@media (min-width:300px) and (max-width:767px){
+@media (min-width:1px) and (max-width:767px){
     .grid-container-active{
             display: flex;
             flex-direction:row;

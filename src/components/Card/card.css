@@ -12,8 +12,7 @@
 }
 
 .card{
-
-    background-image: url("../../../public/assets/img/KanyeWest.jpg") ;
+    /* background-image: url("../../../public/assets/img/KanyeWest.jpg") ; */
     background-size: cover;
     background-repeat: no-repeat;
     height:300px;
