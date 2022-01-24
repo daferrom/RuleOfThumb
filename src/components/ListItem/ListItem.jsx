@@ -3,7 +3,7 @@ import "./listItem.css";
 
 
 const ListItem = ({props}) => {
-  const imageUrl = `https://github.com/daferrom/RuleOfThumb/blob/main/public/assets/img/backgroundcards/${props.picture}?raw=true`
+  const imageUrl = `https://github.com/daferrom/RuleOfThumb/blob/main/public/assets/img/backgroundsLisView/${props.pictureSmall}?raw=true`
 
   return (
     <div className="itemContainer">
@@ -18,7 +18,7 @@ const ListItem = ({props}) => {
         </h3>{" "}
       </div>
       <div className="containerDateAndBtns">
-        <h4 className="pubSince">1 month ago in Entertainment</h4>
+        <h4 className="pubSince">1 month ago in {props.category}</h4>
         <div className="btnsContainer">
           <div className="thumbBtns"></div>
             <button className="iconBtn" aria-label="thumbs up">
@@ -33,10 +33,10 @@ const ListItem = ({props}) => {
       <div className="votationBarLi">
                 <div className="thumbsUp">
                     <img src="../../assets/img/thumbs-up.svg" alt="thumbs up" />
-                    <p className="percentageUp">25%</p>
+                    <p className="percentageUp">{props.votes.positive}</p>
                 </div>
                 <div className="thumbsDown">
-                    <p className="percentageDown">75%</p>
+                    <p className="percentageDown">{props.votes.negative}</p>
                     <img src="../../assets/img/thumbs-down.svg" alt="thumbs Down" />
                 </div>
         </div>
