@@ -32,7 +32,7 @@ const Card = ({props}) => {
             </div>
             <div className="labelVoteNow">Vote Now</div>
         </div>
-        <Pollbar props/>
+        <Pollbar votes={props.votes}/>
     </div>
   
  
