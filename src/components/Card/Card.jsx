@@ -1,5 +1,7 @@
 import React from 'react';
-import './card.css'
+import Pollbar from '../Pollbar/Pollbar';
+import './card.css';
+
 
 const Card = ({props}) => {
     const imgUrl = `url(https://github.com/daferrom/RuleOfThumb/blob/main/public/assets/img/backgroundcards/${props.picture}?raw=true)`
@@ -30,16 +32,7 @@ const Card = ({props}) => {
             </div>
             <div className="labelVoteNow">Vote Now</div>
         </div>
-        <div className="votationBar">
-                <div className="thumbsUp" >
-                    <img src="../../assets/img/thumbs-up.svg" alt="thumbs up" />
-                    <p className="percentageUp">{props.votes.positive}</p>
-                </div>
-                <div className="thumbsDown">
-                    <p className="percentageDown">{props.votes.negative}</p>
-                    <img src="../../assets/img/thumbs-down.svg" alt="thumbs Down" />
-                </div>
-        </div>
+        <Pollbar props/>
     </div>
   
  

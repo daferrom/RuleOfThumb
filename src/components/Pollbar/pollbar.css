@@ -1,0 +1,34 @@
+.votationBar{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.thumbsUp{
+    display:flex;
+    background-color:rgba(var(--color-green-positive),.7);
+    width: 25%;
+    position:absolute;
+    bottom:0;
+    left: 0;
+}
+.thumbsUp img{
+    margin-left:1em;
+}
+.thumbsDown{
+    display:flex;
+    background-color:rgba(var(--color-yellow-negative), .7);
+    width:75%;
+    position:absolute;
+    bottom:0;
+    right: 0;
+    justify-content: right;
+}
+.thumbsDown img{
+    margin-right:1em;
+}
+
+.percentageUp,.percentageDown{
+    margin: 5px 5px;
+    font-size: 1.6em;
+    color:var(--color-white)
+}
