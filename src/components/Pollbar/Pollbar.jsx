@@ -9,7 +9,7 @@ const VotationBar = styled.div`
 const ThumbsUpBar = styled.div`
   display: flex;
   background-color: rgba(var(--color-green-positive), 0.7);
-  width: 25%;
+  width: ${props => props.width}%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -24,7 +24,7 @@ const ThumbsDownIcon = styled.img`
 const ThumbsDownBar = styled.div`
     display:flex;
     background-color:rgba(var(--color-yellow-negative), .7);
-    width:75%;
+    width: ${props => props.width}%;
     position:absolute;
     bottom:0;
     right: 0;
@@ -35,26 +35,24 @@ const Percentage= styled.p`
     font-size: 1.6em;
     color:var(--color-white)
 `
+
 const Pollbar = ({votes}) => {
   let vNegative = votes.negative
   let vPositive = votes.positive
   let totalVotes = vNegative + vPositive
-  let percentageNeg = vNegative / totalVotes * 100
-  let percentagePos = vPositive / totalVotes * 100
-
-
-
-
-
+  
+  let percentageNeg = (vNegative / totalVotes * 100).toFixed(1)
+  let percentagePos = (vPositive / totalVotes * 100).toFixed(1)
+  
   return (
     <div>
       <VotationBar>
-        <ThumbsUpBar>
+        <ThumbsUpBar width={percentagePos} >
           <ThumbUpIcon src='../../assets/img/thumbs-up.svg' alt='thumbs up' />
-          <Percentage>{percentagePos.toFixed(1)}%</Percentage>
+          <Percentage>{percentagePos}%</Percentage>
         </ThumbsUpBar>
-        <ThumbsDownBar>
-          <Percentage>{percentageNeg.toFixed(1)}%</Percentage>
+        <ThumbsDownBar width={percentageNeg}>
+          <Percentage>{percentageNeg}%</Percentage>
           <ThumbsDownIcon src='../../assets/img/thumbs-down.svg' alt='thumbs Down' />
         </ThumbsDownBar>
       </VotationBar>

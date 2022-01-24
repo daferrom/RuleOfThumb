@@ -85,6 +85,7 @@
     margin-top: 5px;
     margin-right:2em;
     font-size: 1rem;
+    margin-bottom: 10px;
     
 }
 .thumbsContainer{
@@ -95,17 +96,24 @@
     margin-right:2em;
 }
 .buttonContainer{
-    margin:5px 0px;
+    display:flex;
+    align-items: center;
 }
 
 .iconButton {
+    background-repeat: no-repeat;
     padding: 5px 7px;
     border: 0;
     margin-right:12px;
+    cursor:pointer;
+    height:30px;
+    width:30px;
+    background-position: center;
 }
 
 .iconButton[aria-label="thumbs up"] {
     background-color: rgba(var(--color-green-positive));
+    background-image:  url("https://raw.githubusercontent.com/daferrom/RuleOfThumb/f2510aecfe85d7d76bfc9bac70a6efbb72f0fb0f/public/assets/img/thumbs-up.svg");   
 }
 
 .iconButton[aria-label="thumbs up"]:hover {
@@ -114,22 +122,51 @@
 
 .iconButton[aria-label="thumbs down"] {
     background-color: rgba(var(--color-yellow-negative));
+    background-image:  url("https://raw.githubusercontent.com/daferrom/RuleOfThumb/f2510aecfe85d7d76bfc9bac70a6efbb72f0fb0f/public/assets/img/thumbs-down.svg");   
 }
 
 .iconButton[aria-label="thumbs down"]:hover {
     background-color: rgba(var(--color-yellow-negative), .7);
 }
-
-.labelVoteNow{
+.iconButton:focus {
+    border: 2px solid var(--color-white);
+}
+.iconButton:focus {
+    border: 2px solid var(--color-white) ;
+}
+.VoteNowBtn:disabled{
+    color:var(--color-dark-gray);
     display:flex;
-    background-color: var(--color-darker-background);
+    background-color: var(--color-dark-background);
+    border: solid;
+    border-color: var(--color-white);
+    border-width: 1px;
+    padding: 0em 1.5em;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2em;
+    height: 45px; 
+} 
+.VoteNowBtn:enabled{
+    color:var(--color-white);
+    display:flex;
+    background-color: var(--color-gray-medium);
     border: solid;
     border-width: 1px;
     padding: 0em 1.5em;
     text-align: center;
     align-items: center;
     font-size: 1.2em;
+    height: 45px; 
+    cursor: pointer;
 }
+.VoteNowBtn:enabled:hover{
+    background-color: var(--color-lighter-background);
+    color:var(--color-gray-medium)
+}
+
+
+
 
 /* @media (min-width:768px){
     .card{

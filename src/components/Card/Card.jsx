@@ -23,14 +23,10 @@ const Card = ({props}) => {
         <h4 className="pubDate">2 months ago</h4>
         <div className="thumbsContainer">
             <div className='buttonContainer'>
-                <button className="iconButton" aria-label="thumbs up">
-                    <img src="../../assets/img/thumbs-up.svg" alt="thumbs up" />
-                </button>
-                <button className="iconButton" aria-label="thumbs down">
-                    <img src="../../assets/img/thumbs-down.svg" alt="thumbs down" />
-                </button>
+                <button className="iconButton" aria-label="thumbs up"></button>
+                <button className="iconButton" aria-label="thumbs down"></button>
+                <button className="VoteNowBtn" disabled>Vote Now</button>
             </div>
-            <div className="labelVoteNow">Vote Now</div>
         </div>
         <Pollbar votes={props.votes}/>
     </div>
