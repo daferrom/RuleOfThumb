@@ -30,9 +30,9 @@
     
 }
 .imgCelebrity{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0),var(--color-dark-background)),url(../../../public/assets/img/backgroundcards/kanye.png);
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0),var(--color-dark-background)),;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     height:142px;
     width:142px;
 }
@@ -43,10 +43,14 @@
     color:var(--color-white)
 }
 .questionList{
+    display:flex;
+    flex-wrap: wrap;
     margin: 5px 0 0 0px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align:left;
     font-weight: 350;
+    position:relative;
+    width:60%;
     
 }
 .containerDateAndBtns{

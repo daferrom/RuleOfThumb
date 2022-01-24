@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Card from '../Card/Card';
 import './cards.css'
 import ListItem from '../ListItem/ListItem';
-
-
+import data from '../../dummyData/data.json'
 
 const Cards = () => {
+  const polls = data.data
+  console.log(polls)    
 
   const [ listStyleName , setListStyleName ] = useState('list-container-active')
   const [ gridStyleName , setGridStyleName ] = useState('grid-container')
@@ -31,12 +32,9 @@ const Cards = () => {
         </select>
       </div>
     <div className={listStyleName}>
-      <ListItem/>
-      <ListItem/>
-      <ListItem/>
-      <ListItem/>
-      <ListItem/>
-      <ListItem/>
+      {polls.map((poll, index)=>
+      <ListItem props={poll} key={index}/>
+      )}        
     </div>
     <div className={gridStyleName}>
       <Card/>

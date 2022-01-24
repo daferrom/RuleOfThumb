@@ -1,7 +1,7 @@
 import React from 'react';
 import './card.css'
 
-const Card = () => {
+const Card = (props) => {
   return (
  
   <div className='card'>
@@ -10,7 +10,7 @@ const Card = () => {
                 <img className='icon' alt="ThumbDownIcon" src='../../assets/img/thumbs-down.svg' width="20" height="20"></img>
             </div>
             <div className='texts'>
-                <h2 className='pollTitle'>Kanye West</h2>
+                <h2 className='pollTitle'>{props.name}</h2>
                 <h3 className='question'>Should him come back with Kim Kardashian?</h3>
                 <h4 className="pubDate">2 months ago</h4>
             </div>

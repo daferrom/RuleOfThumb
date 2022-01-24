@@ -1,21 +1,24 @@
 import React from "react";
 import "./listItem.css";
 
-const ListItem = () => {
+
+const ListItem = ({props}) => {
+  const imageUrl = `../../../public/assets/img/backgroundcards/kanye.png`
+
   return (
     <div className="itemContainer">
       <div className="iconCont">
         <img src="../../assets/img/thumbs-up.svg" alt="thumbs up" />
       </div>
-      <div className="imgCelebrity" alt="Kaney"></div>
+      <img className="imgCelebrity" src={imageUrl} alt="Kaney"></img>
       <div className="textsContainer">
-        <h2 className="pollTitle">Kanye West</h2>
+        <h2 className="pollTitle">{props.name}</h2>
         <h3 className="questionList">
-          Should him come back with Kim Kardashian?
+          {props.description}
         </h3>{" "}
       </div>
       <div className="containerDateAndBtns">
-        <h4 className="pubSince">1 month ago in Entertainment</h4>;
+        <h4 className="pubSince">1 month ago in Entertainment</h4>
         <div className="btnsContainer">
           <div className="thumbBtns"></div>
             <button className="iconBtn" aria-label="thumbs up">
