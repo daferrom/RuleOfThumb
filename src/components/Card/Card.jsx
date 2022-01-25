@@ -1,4 +1,4 @@
-import { useState , useRef } from 'react'
+import { useState  } from 'react'
 import React from 'react'
 import Pollbar from '../Pollbar/Pollbar'
 import './card.css'
@@ -11,20 +11,15 @@ const Card = ({ props }) => {
   const [ isDislikeActive , setIsDisLikeActive] = useState(false)
   const [ textVoteBtn , setTextVoteBtn] = useState('Vote Now')
 
-  const InitialState = {
-    disableVoteBtn:true,
-    isLikeActive:false,
-    isDislikeActive:false,
-    textVoteBtn:'Vote Now',
-  }
-
+  
 
   const clickOnlike =() => {
 
     setIsLikeActive(true)
     setIsDisLikeActive(false)
-
+    
     setdisableVoteBtn(false)    
+
   }
 
   
@@ -35,33 +30,35 @@ const Card = ({ props }) => {
 
     setdisableVoteBtn(false)
 }
-  if( isLikeActive === true && isDislikeActive === false){
-     console.log(isLikeActive)
-     console.log(isDislikeActive)   
-   } 
-
-   if( isLikeActive === false && isDislikeActive === false){
-    console.log("sin clicks")   
-  }
-
-    const postVote = ( likeVote , disLikeVote ) => {
+  const postVote = ( likeVote , disLikeVote ) => {
+    // checks thetext of the btn and updates its text //  
+    
+    const addLikeVote = ()=>{
+      console.log(props.votes.positive)
+    }
+    
+    
     textVoteBtn === 'Vote Again' ? setTextVoteBtn('Vote Now'):setTextVoteBtn('Vote Again')
+    likeVote === true ? addLikeVote() : console.log('votaste no me gusta')
+    
+    
+    
+
     setdisableVoteBtn(true)
 
-    if( likeVote === true ){
+    // if( likeVote === true ){
       
-      console.log("enviaste voto me gusta")
+    //   console.log("enviaste voto me gusta")
 
-    } else if (disLikeVote === true){
+    // } else if (disLikeVote === true){
       
-      console.log("enviaste voto no me gusta")
+    //   console.log("enviaste voto no me gusta")
 
-    }
+    // }
     
     }
 
-  // disableVoteBtntrue === false && textVoteBtn === 'Vote Again'?: 
-    
+  
     
   return (
     <div className='card' style={{ backgroundImage: imgUrl }}>

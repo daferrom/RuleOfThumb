@@ -49,7 +49,7 @@ const Pollbar = ({votes}) => {
       <VotationBar>
         <ThumbsUpBar width={percentagePos} >
           <ThumbUpIcon src='../../assets/img/thumbs-up.svg' alt='thumbs up' />
-          <Percentage>{percentagePos}%</Percentage>
+          <Percentage>{percentagePos}%{vPositive}</Percentage>
         </ThumbsUpBar>
         <ThumbsDownBar width={percentageNeg}>
           <Percentage>{percentageNeg}%</Percentage>
