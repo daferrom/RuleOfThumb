@@ -135,7 +135,7 @@
     border: 2px solid var(--color-white) ;
 }
 .VoteNowBtn:disabled{
-    color:var(--color-dark-gray);
+    color:var(--color-white);
     display:flex;
     background-color: var(--color-dark-background);
     border: solid;
