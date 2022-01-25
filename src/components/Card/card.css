@@ -12,12 +12,10 @@
 }
 
 .card{
-    /* background-image: url("../../../public/assets/img/KanyeWest.jpg") ; */
     background-size: cover;
     background-repeat: no-repeat;
     height:300px;
     width:300px;
-
     padding:0px;
     margin:0px;
     position: relative;
@@ -50,9 +48,7 @@
    height:16px;
    width:16px;
 }
-/* .texts{
-    padding-top: 0px;
-} */
+
 .pollTitle,.description,.pubDate,.labelVoteNow{
     color:var(--color-white)
 }
@@ -66,7 +62,7 @@
     margin-left: 5px;
     padding:0;
     width: 90%;
-    line-height: 1.2em;
+    line-height: 42px;
 }
 .description {
     display: flex;
@@ -165,12 +161,3 @@
     background-color: var(--color-lighter-background);
     color:var(--color-gray-medium)
 }
-
-
-
-
-/* @media (min-width:768px){
-    .card{
-
-
-}} */

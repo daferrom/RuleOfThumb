@@ -68,7 +68,6 @@
     }
     .grid-container-active{
         display:grid;
-        background-color: gray;
         grid-template-columns: 351px 351px;
         justify-content: space-between;
         margin:0 0 0 0 ;
@@ -81,4 +80,30 @@
     }      
 }
 
+
+/*Media query for tablets*/
+@media (min-width:1200px) {
+    .list-container{
+        display:none
+    }
+    .list-container:active{
+        display:flex;
+    }
+    .grid-container{
+        display: none;
+        
+    }
+    .grid-container-active{
+        display:grid;
+        grid-template-columns: 351px 351px 351px;
+        justify-content: space-between;
+        margin:0 0 0 0 ;
+        padding:0px
+    }
+    .card{
+        height:351px;
+        width:351px;
+        margin-right:0px;
+    }      
+}
 

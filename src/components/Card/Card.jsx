@@ -1,12 +1,16 @@
-import { useEffect, useState  } from 'react'
+import { useState } from 'react'
 import React from 'react'
 import Pollbar from '../Pollbar/Pollbar'
 import './card.css'
 
 const Card = ({ props }) => {
+  
+ 
+  
+  
   const imgUrl = `url(https://github.com/daferrom/RuleOfThumb/blob/main/public/assets/img/backgroundcards/${props.picture}?raw=true)`
    
-  const [disableVoteBtn, setdisableVoteBtn] = useState(true)
+  const [ disableVoteBtn, setdisableVoteBtn] = useState(true)
   const [ isLikeActive , setIsLikeActive] = useState(false)
   const [ isDislikeActive , setIsDisLikeActive] = useState(false)
   const [ textVoteBtn , setTextVoteBtn] = useState('Vote Now')
@@ -60,13 +64,14 @@ const Card = ({ props }) => {
         </div>
         <h3 className='description'>{props.description}</h3>
       </div>
-      <h4 className='pubDate'>2 months ago</h4>
+      <h4 className='pubDate'>2 months ago in {props.category}</h4>
       <div className='thumbsContainer'>
         <div className='buttonContainer'>
           <button
             className='iconButton'
             aria-label='thumbs up'
             onClick={e => clickOnlike(false)}
+  
           ></button>
           <button
             className='iconButton'
@@ -82,7 +87,7 @@ const Card = ({ props }) => {
           </button>
         </div>
       </div>
-      <Pollbar votes={props.votes} likes={likes}/>
+      <Pollbar votes={props.votes} likes={likes} dislikes={dislikes}/>
     </div>
   )
 }

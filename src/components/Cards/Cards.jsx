@@ -26,8 +26,8 @@ const Cards = () => {
       <div className="titleSelectContainer">
       <h1 className="title">Previous Rulings</h1>
         <select className="select">
-          <option className="option" value='listView' onClick={(e)=>listSelected(e)}>List</option>
-          <option className="option" value='gridView' onClick={(e)=>gridSelected(e)}>Grid</option>
+          <option className="option" value='listView' onClick={()=>listSelected()}>List</option>
+          <option className="option" value='gridView' onClick={()=>gridSelected()}>Grid</option>
         </select>
       </div>
     <div className={listStyleName}>

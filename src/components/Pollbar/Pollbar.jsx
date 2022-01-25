@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styled from 'styled-components'
 
 const VotationBar = styled.div`
@@ -36,13 +36,16 @@ const Percentage= styled.p`
     color:var(--color-white)
 `
 
-const Pollbar = ({votes, likes}) => {
-  let vNegative = votes.negative
+const Pollbar = ({ likes, dislikes}) => {
+ 
+  let vNegative = dislikes
   let vPositive = likes
   let totalVotes = vNegative + vPositive
   
   let percentageNeg = (vNegative / totalVotes * 100).toFixed(1)
   let percentagePos = (vPositive / totalVotes * 100).toFixed(1)
+  
+  // const [ percentageNeg, setPercentageNeg ] = useState((vNegative / totalVotes * 100).toFixed(1))
   
   // console.log(likes)
   return (
@@ -53,7 +56,7 @@ const Pollbar = ({votes, likes}) => {
           <Percentage>{percentagePos}%</Percentage>
         </ThumbsUpBar>
         <ThumbsDownBar width={percentageNeg}>
-          <Percentage>{percentageNeg}%</Percentage>
+          <Percentage >{percentageNeg}%</Percentage>
           <ThumbsDownIcon src='../../assets/img/thumbs-down.svg' alt='thumbs Down' />
         </ThumbsDownBar>
       </VotationBar>
