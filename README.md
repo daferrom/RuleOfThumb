@@ -16,11 +16,13 @@ This project was created using React.js it allows the scalability o  the project
 
 You can clone the repo using in your command line
 
-## `git clone https://github.com/daferrom/RuleOfThumb`
+`git clone https://github.com/daferrom/RuleOfThumb`
+
+In the project directory, you run:
 
 ## `nmp i or npm install`
 
-In the project directory, you can run:
+In the project directory, you run:
 
 ### `npm start`
 

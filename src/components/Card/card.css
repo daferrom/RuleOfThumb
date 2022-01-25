@@ -66,6 +66,7 @@
     margin-left: 5px;
     padding:0;
     width: 90%;
+    line-height: 1.2em;
 }
 .description {
     display: flex;

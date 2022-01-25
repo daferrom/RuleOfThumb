@@ -1,4 +1,4 @@
-import { useState  } from 'react'
+import { useEffect, useState  } from 'react'
 import React from 'react'
 import Pollbar from '../Pollbar/Pollbar'
 import './card.css'
@@ -10,8 +10,8 @@ const Card = ({ props }) => {
   const [ isLikeActive , setIsLikeActive] = useState(false)
   const [ isDislikeActive , setIsDisLikeActive] = useState(false)
   const [ textVoteBtn , setTextVoteBtn] = useState('Vote Now')
-
-  
+  const [ likes , setlikes ] = useState(props.votes.positive)
+  const [ dislikes , setDislikes ] = useState(props.votes.negative)
 
   const clickOnlike =() => {
 
@@ -33,29 +33,12 @@ const Card = ({ props }) => {
   const postVote = ( likeVote , disLikeVote ) => {
     // checks thetext of the btn and updates its text //  
     
-    const addLikeVote = ()=>{
-      console.log(props.votes.positive)
-    }
-    
-    
     textVoteBtn === 'Vote Again' ? setTextVoteBtn('Vote Now'):setTextVoteBtn('Vote Again')
-    likeVote === true ? addLikeVote() : console.log('votaste no me gusta')
+    likeVote === true ? setlikes(likes+1) : console.log('votaste no me gusta')
+    disLikeVote === true ? setDislikes(dislikes+1):console.log('votaste me gusta')
     
-    
-    
-
     setdisableVoteBtn(true)
 
-    // if( likeVote === true ){
-      
-    //   console.log("enviaste voto me gusta")
-
-    // } else if (disLikeVote === true){
-      
-    //   console.log("enviaste voto no me gusta")
-
-    // }
-    
     }
 
   
@@ -73,7 +56,7 @@ const Card = ({ props }) => {
               height='20'
             ></img>
           </div>
-          <h2 className='pollTitle'>{textVoteBtn === 'Vote Again'? 'Thank for your Vote': props.name}</h2>
+          <h2 className='pollTitle'>{textVoteBtn === 'Vote Again'? 'Thank you for your vote!': props.name}</h2>
         </div>
         <h3 className='description'>{props.description}</h3>
       </div>
@@ -99,7 +82,7 @@ const Card = ({ props }) => {
           </button>
         </div>
       </div>
-      <Pollbar votes={props.votes} />
+      <Pollbar votes={props.votes} likes={likes}/>
     </div>
   )
 }

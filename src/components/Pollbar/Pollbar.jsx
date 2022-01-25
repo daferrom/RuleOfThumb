@@ -36,20 +36,21 @@ const Percentage= styled.p`
     color:var(--color-white)
 `
 
-const Pollbar = ({votes}) => {
+const Pollbar = ({votes, likes}) => {
   let vNegative = votes.negative
-  let vPositive = votes.positive
+  let vPositive = likes
   let totalVotes = vNegative + vPositive
   
   let percentageNeg = (vNegative / totalVotes * 100).toFixed(1)
   let percentagePos = (vPositive / totalVotes * 100).toFixed(1)
   
+  // console.log(likes)
   return (
     <div>
       <VotationBar>
         <ThumbsUpBar width={percentagePos} >
           <ThumbUpIcon src='../../assets/img/thumbs-up.svg' alt='thumbs up' />
-          <Percentage>{percentagePos}%{vPositive}</Percentage>
+          <Percentage>{percentagePos}%</Percentage>
         </ThumbsUpBar>
         <ThumbsDownBar width={percentageNeg}>
           <Percentage>{percentageNeg}%</Percentage>
